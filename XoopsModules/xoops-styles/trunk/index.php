@@ -13,8 +13,6 @@ if(isset($xoTheme) && is_object($xoTheme)) {
    $xoTheme->addMeta( 'meta', 'keywords', 'web,design,css,html,xml,php,js,marvelous,burning');
    $xoTheme->addMeta( 'meta', 'description', 'Page example to test my theme stylesModule to test my theme styles.');
 }
-$xoopsTpl->assign( 'xoops_showrblock', 0); // 1 = With right blocks - 0 = Without right blocks
-$xoopsTpl->assign( 'xoops_showlblock', 0); // 1 = With left blocks - 0 = Without left blocks
 ?>
 <style type="text/css">
 .marginbot10 {margin-bottom: 10px}
@@ -80,14 +78,22 @@ td.element-cell {width: 48%; vertical-align: top}
 		<tr>
 			<td class="element-cell">
 				<div class="element-name"><img src="ico_generic_fonts.png" width="24" height="24" alt="" title="">Generic font class</div>
-				<div class="element">
-					<div class="smallsmall">.smallsmall</div>
-					<div class="small">.small</div>
-					<div class="normal">.normal</div>
-					<div class="big ">.big </div>
-					<div class="maxi">.maxi</div>
-					<div class="bold">.bold</div>
-					<div class="italic">.italic</div>
+				<div class="element boxshadow">
+					<span class="smallsmall">.smallsmall</span>
+					<br />
+					<span class="small">.small</span>
+					<br />
+					<span class="normal">.normal</span>
+					<br />
+					<span class="big ">.big </span>
+					<br />
+					<span class="maxi">.maxi</span>
+					<br />
+					<span class="bold">.bold</span>
+					<br />
+					<span class="italic">.italic</span>
+					<br />
+					<span class="shadow">.shadow</span>
 				</div>			  
 				</div>
 			</td>
@@ -103,6 +109,16 @@ td.element-cell {width: 48%; vertical-align: top}
 						<del>del tag</del>
 						<br />
 						<small>small tag</small>
+						<br />
+						<acronym>acronym tag</acronym>
+						<br />
+						<abbr>abbr tag</abbr>
+						<br />
+						<cite>cite tag</cite>
+						<br />
+						<dfn>dfn tag</dfn>
+						<br />
+						<address>address tag</address>
 					</div>		  
 				</div>
 			</td>
@@ -207,21 +223,22 @@ td.element-cell {width: 48%; vertical-align: top}
 							</tr>
 						</table>
 						<table>
+							<caption>caption</caption>
 							<thead>
 								<tr>
-									<td>thead</td>
+									<th>thead</th>
 								</tr>
 							</thead>
-						</table>
-						<table>
-							<caption>caption</caption>
-						</table>
-						<table>
 							<tfoot>
 								<tr>
 									<td>tfoot</td>
 								</tr>
 							</tfoot>
+							<tbody>
+								<tr>
+									<td>tbody</td>
+								</tr>
+							</tbody>
 						</table>
 					</div>
 				</div>
@@ -236,21 +253,22 @@ td.element-cell {width: 48%; vertical-align: top}
 							</tr>
 						</table>
 						<table>
+							<caption><a href="#" title="">caption</a></caption>
 							<thead>
 								<tr>
-									<td><a href="#" title="">thead</a></td>
+									<th><a href="#" title="">thead</a></th>
 								</tr>
 							</thead>
-						</table>
-						<table>
-							<caption><a href="#" title="">caption</a></caption>
-						</table>
-						<table>
 							<tfoot>
 								<tr>
 									<td><a href="#" title="">tfoot</a></td>
 								</tr>
 							</tfoot>
+							<tbody>
+								<tr>
+									<td><a href="#" title="">tbody</a></td>
+								</tr>
+								</tbody>
 						</table>
 					</div>
 				</div>
@@ -394,6 +412,8 @@ td.element-cell {width: 48%; vertical-align: top}
 			</td>
 		</tr>
 	</table>
+	<div><div class="element-name"><img src="package_editors.png" width="24" height="24" alt="" title="">Paragraph style & text selection</div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque facilisis quam at ante tempor tempor. Mauris condimentum dignissim fringilla. Fusce ut enim id augue <a href="#" title="My title">dignissim molestie</a>. Proin nec lacus non leo ullamcorper scelerisque vitae in arcu. Donec fermentum, leo ac euismod consequat, nisl arcu interdum nunc, pellentesque vestibulum velit lectus et ligula. Praesent quis purus nec enim porta porta. Nulla sodales mollis massa vitae ultrices. Nullam in dolor elit, eu vulputate ligula.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque facilisis quam at ante tempor tempor. Mauris condimentum dignissim fringilla. Fusce ut enim id augue dignissim molestie. Proin nec lacus non leo ullamcorper scelerisque vitae in arcu. Donec fermentum, leo ac euismod consequat, nisl arcu interdum nunc, pellentesque vestibulum velit lectus et ligula. Praesent quis purus nec enim porta porta. Nulla sodales mollis massa vitae ultrices. Nullam in dolor elit, eu vulputate ligula.</p></div>
 
 	<table>
 		<tr>
@@ -464,74 +484,79 @@ td.element-cell {width: 48%; vertical-align: top}
 			<td class="element-cell">
 				<div class="element-name"><img src="ico_forms.png" width="24" height="24" alt="" title="">Forms</div>
 				<div class="element">
-					<div>
-					  <label>Textfield (label)
-						<input type="text" name="textfield" id="textfield" />
-					  </label>
-					</div>
-					<div>
-					  <label>Textarea (label)
-						<textarea name="textarea" id="textarea" cols="45" rows="5"></textarea>
-					  </label>
-					</div>
-					<div>
-					  <label>
-						<input type="checkbox" name="CheckboxGroup1" value="Check me if you can" id="CheckboxGroup1_0" />
-						Check me if you can</label>
-					  <br />
-					  <label>
-						<input type="checkbox" name="CheckboxGroup1" value="Check me if you can" id="CheckboxGroup1_1" />
-						Check me if you can</label>
-					  <br />
-					  <label>
-						<input type="checkbox" name="CheckboxGroup1" value="Check me if you can" id="CheckboxGroup1_2" />
-						Check me if you can</label>
-					</div>
-					<div>
-					  <label>
-						<input type="radio" name="RadioGroup1" value="Radio button" id="RadioGroup1_0" />
-						Radio button</label>
-					  <br />
-					  <label>
-						<input type="radio" name="RadioGroup1" value="Radio button" id="RadioGroup1_1" />
-						Radio button</label>
-					  <br />
-					  <label>
-						<input type="radio" name="RadioGroup1" value="Radio button" id="RadioGroup1_2" />
-						Radio button</label>
-					  <br />
-					</div>
-					<div>
-					  <label>Select A (label)
-						<select name="select" id="select">
-						  <option>Lorem ipsum 01</option>
-						  <option>Lorem ipsum 02</option>
-						  <option>Lorem ipsum 03</option>
-						  <option>Lorem ipsum 04</option>
-						  <option>Lorem ipsum 05</option>
-						</select>
-					  </label>  
-					</div>
-					<div>
-					  <label>Select B (label)
-						<select name="select2" size="5" id="select2">
-						  <option>Lorem ipsum 01</option>
-						  <option selected="selected">Lorem ipsum 02</option>
-						  <option>Lorem ipsum 03</option>
-						  <option>Lorem ipsum 04</option>
-						  <option>Lorem ipsum 05</option>
-						</select>
-					  </label>
-					</div>
-					<div>
-					  <label>Input File (label)
-						<input type="file" name="fileField" id="fileField" />
-					  </label>
-					</div>
-					<div>
-					  <label>Input Submit (label)
-						<input type="submit" name="button" id="button" value="Envoyer" />
-					  </label>
+					<fieldset>
+					<legend>legend form tag</legend>
+					<form action="" method="" class="">
+						<div>
+						  <label>Textfield (label)
+							<input type="text" name="textfield" id="textfield" />
+						  </label>
+						</div>
+						<div>
+						  <label>Textarea (label)
+							<textarea name="textarea" id="textarea" cols="45" rows="5"></textarea>
+						  </label>
+						</div>
+						<div>
+						  <label>
+							<input type="checkbox" name="CheckboxGroup1" value="Check me if you can" id="CheckboxGroup1_0" />
+							Check me if you can</label>
+						  <br />
+						  <label>
+							<input type="checkbox" name="CheckboxGroup1" value="Check me if you can" id="CheckboxGroup1_1" />
+							Check me if you can</label>
+						  <br />
+						  <label>
+							<input type="checkbox" name="CheckboxGroup1" value="Check me if you can" id="CheckboxGroup1_2" />
+							Check me if you can</label>
+						</div>
+						<div>
+						  <label>
+							<input type="radio" name="RadioGroup1" value="Radio button" id="RadioGroup1_0" />
+							Radio button</label>
+						  <br />
+						  <label>
+							<input type="radio" name="RadioGroup1" value="Radio button" id="RadioGroup1_1" />
+							Radio button</label>
+						  <br />
+						  <label>
+							<input type="radio" name="RadioGroup1" value="Radio button" id="RadioGroup1_2" />
+							Radio button</label>
+						  <br />
+						</div>
+						<div>
+						  <label>Select A (label)
+							<select name="select" id="select">
+							  <option>Lorem ipsum 01</option>
+							  <option>Lorem ipsum 02</option>
+							  <option>Lorem ipsum 03</option>
+							  <option>Lorem ipsum 04</option>
+							  <option>Lorem ipsum 05</option>
+							</select>
+						  </label>  
+						</div>
+						<div>
+						  <label>Select B (label)
+							<select name="select2" size="5" id="select2">
+							  <option>Lorem ipsum 01</option>
+							  <option selected="selected">Lorem ipsum 02</option>
+							  <option>Lorem ipsum 03</option>
+							  <option>Lorem ipsum 04</option>
+							  <option>Lorem ipsum 05</option>
+							</select>
+						  </label>
+						</div>
+						<div>
+						  <label>Input File (label)
+							<input type="file" name="fileField" id="fileField" />
+						  </label>
+						</div>
+						<div>
+						  <label>Input Submit (label)
+							<input type="submit" name="button" id="button" value="Envoyer" />
+						  </label>
+						</form>
+						</fieldset>
 					</div>
 				</div>
 			</td>
