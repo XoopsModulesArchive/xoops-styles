@@ -79,7 +79,9 @@ td.element-cell {width: 48%; vertical-align: top}
 			<td class="element-cell">
 				<div class="element-name"><img src="ico_generic_fonts.png" width="24" height="24" alt="" title="">Generic font class</div>
 				<div class="element boxshadow">
-					<span class="smallsmall">.smallsmall</span>
+					<span class="verysmall">.verysmall or .xx-small</span>
+					<br />
+					<span class="smallsmall">.smallsmall or .x-small</span>
 					<br />
 					<span class="small">.small</span>
 					<br />
@@ -91,9 +93,27 @@ td.element-cell {width: 48%; vertical-align: top}
 					<br />
 					<span class="bold">.bold</span>
 					<br />
+					<span class="bolder">.bolder</span>
+					<br />
+					<span class="lighter">.lighter</span>
+					<br />
 					<span class="italic">.italic</span>
 					<br />
+					<span class="oblique">.oblique</span>
+					<br />
+					<span class="underline">.underline</span>
+					<br />
 					<span class="shadow">.shadow</span>
+					<br />
+					<span class="shadowlight">.shadowlight</span>
+					<br />
+					<span class="cursordefault">.cursordefault</span>
+					<br />
+					<span class="cursormove">.cursormove</span>
+					<br />
+					<span class="cursorpointer">.cursorpointer</span>
+					<br />
+					<span class="cursorhelp">.cursorhelp</span>
 				</div>			  
 				</div>
 			</td>

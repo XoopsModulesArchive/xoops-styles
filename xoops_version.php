@@ -1,9 +1,9 @@
 <?php
 $modversion['name'] = "xoops-styles";
-$modversion['version'] = 1.01;
+$modversion['version'] = 1.02;
 $modversion['description'] = "Faux module Xoops Documentation";
 $modversion['credits'] = "Chewb - Christian - Dugris - Kris_fr";
-$modversion['author'] = "Burning";
+$modversion['author'] = "Burning & Xoops Design Team";
 $modversion['help'] = "";
 $modversion['license'] = "GPL see LICENSE";
 $modversion['official'] = 1;
