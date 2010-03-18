@@ -1,6 +1,11 @@
 Xoops-Styles Module - Changelog
 
 ============================
+Version 1.03 ( for xoops 2.4.x )
+============================
+- Add "u" tag (kris_fr)
+
+============================
 Version 1.02 ( for xoops 2.4.x )
 ============================
 - Add class tag for extras.css - see "extras" folder for style sheet example (kris_fr)
