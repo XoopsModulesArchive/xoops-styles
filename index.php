@@ -122,7 +122,9 @@ td.element-cell {width: 48%; vertical-align: top}
 					<div class="element">
 						<a href="" title="">Link</a>
 						<hr>hr Tag<hr>
-						<em>em Tag</em>
+						<em>em & i Tags</em>
+						<br />
+						<em>u Tag</em>
 						<br />
 						<strong>strong and b Tags</strong>
 						<br />
